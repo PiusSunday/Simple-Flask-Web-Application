@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Demo</title>
+</head>
+<body>
+    <h1>Welcome to Flask!</h1>
+
+    <p>This is a simple Flask application.</p>
+
+    <button id="getData">Get Data</button>
+
+    <p id="result"></p>
+    <p id="status"></p>
+
+    <script>
+        document.getElementById('getData').addEventListener('click', function() {
+            fetch('/api/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').textContent = data.message;
+                    document.getElementById('status').textContent = data.status;
+                });
+        });
+    </script>
+
+    <a href="{{ url_for('main.home') }}">Go to Home Page</a>
+</body>
+</html>
