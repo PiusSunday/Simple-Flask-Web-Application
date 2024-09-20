@@ -1,6 +1,6 @@
 # Simple Flask Web Application
 
-A basic Flask web application with two routes: Home and About. This project is a simple demonstration of using Flask to build a web application with template rendering and routing.
+A basic Flask web application with three routes: Default (Index), Home and About. This project demonstrates the structure of a Flask application with template rendering and routing.
 
 
 ## Getting Started
